@@ -10,7 +10,7 @@ import net.kj6ywd.packet.kiss.KissCodec
 import net.kj6ywd.packet.kiss.KissDecoder
 
 fun main(args: Array<String>) {
-    val port = args.firstOrNull()?.toIntOrNull() ?: 8001
+    val port = args.firstOrNull()?.toIntOrNull() ?: 18001
     val clients = CopyOnWriteArrayList<java.net.Socket>()
     val server = ServerSocket(port)
 
