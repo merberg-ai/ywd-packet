@@ -34,7 +34,7 @@ export PATH="$SDK_ROOT/cmdline-tools/latest/bin:$SDK_ROOT/platform-tools:$PATH"
 yes | sdkmanager --licenses >/dev/null || true
 sdkmanager \
     "platform-tools" \
-    "platforms;android-37" \
+    "platforms;android-36" \
     "build-tools;36.0.0"
 
 printf 'sdk.dir=%s\n' "$SDK_ROOT" > "$ROOT/local.properties"
