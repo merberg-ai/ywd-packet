@@ -111,7 +111,13 @@ Start the included fake KISS server on the Ubuntu machine:
 ./scripts/run-kiss-sim.sh
 ```
 
-It listens on TCP port `8001` and emits a synthetic AX.25 UI beacon every few seconds. Point YWD Packet at the Ubuntu machine's LAN address and connect. This exercises Android -> TCP -> KISS -> AX.25 decode -> monitor UI without using a radio.
+The simulator defaults to TCP port `18001` so it does not collide with a real KISS listener commonly using port `8001`. Point YWD Packet at the Ubuntu machine's LAN address and port `18001`; it will emit a synthetic AX.25 UI beacon every few seconds. This exercises Android -> TCP -> KISS -> AX.25 decode -> monitor UI without using a radio.
+
+You can override the simulator port explicitly:
+
+```bash
+./scripts/run-kiss-sim.sh 19001
+```
 
 ## Real TNC use
 
