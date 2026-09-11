@@ -62,7 +62,7 @@ git switch dev
 
 The setup script installs OpenJDK 17 and basic host tools, downloads the pinned Android command-line tools, verifies their SHA-256, accepts SDK licenses, and installs:
 
-- Android platform API 37;
+- stable Android platform API 36 (Android 16);
 - Android Build Tools 36.0.0;
 - platform-tools / adb.
 
@@ -138,12 +138,12 @@ The initial P0 baseline uses:
 - Android Gradle Plugin 9.4.0;
 - Gradle 9.6.1;
 - JDK 17;
-- compileSdk 37;
+- compileSdk 36;
 - targetSdk 36;
-- Jetpack Compose BOM 2026.08.00;
+- Jetpack Compose BOM 2026.04.01 (Compose 1.11 generation);
 - Kotlin / Compose compiler plugin 2.3.21.
 
-Versions are intentionally pinned. Build infrastructure should change deliberately, not because a dependency happened to publish something new overnight.
+API 37 / Android 17 is intentionally not used in P0 while its SDK is still on the preview channel. Versions are pinned so build infrastructure changes deliberately rather than because a dependency happened to publish something new overnight.
 
 ## License
 
